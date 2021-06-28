@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:App1.ViewModels"
+			 BackgroundColor = "Lavender"
+             x:Class="App1.Views.HandelPage"
+			 x:DataType="viewmodels:HandelPageViewModel">
+	
+	         <ContentPage.BindingContext>
+		        <viewmodels:HandelPageViewModel/>
+	         </ContentPage.BindingContext>
+
+			 <ContentPage.ToolbarItems>
+				 
+				<ToolbarItem 
+					Text="Legg Til" 
+					Command="{Binding AddCommand}" />
+
+			 </ContentPage.ToolbarItems>
+
+			 <StackLayout Padding="10" VerticalOptions="CenterAndExpand" BackgroundColor="LightSkyBlue">
+
+				<Label
+					x:Name="InfoText"
+					Text="Venligst tast inn gavekort ID."
+					TextColor="Black"
+					HorizontalOptions="CenterAndExpand"
+					FontSize="Medium"/>
+
+
+		 		<Entry
+					x:Name="EntryTest"
+					BackgroundColor="White"
+					Keyboard="Numeric"
+					Text=""
+					TextColor="Black"
+					Placeholder="Gavekort ID..."/>
+				<Button
+						Text="GetTest"
+						Clicked="Button_Clicked"
+						VerticalOptions="Center"
+						HorizontalOptions="Center"
+						/>
+
+				<Label 
+						x:Name="SaldoDisplay"
+						Text=""
+						TextColor="Black"
+						BackgroundColor ="White"
+						HorizontalOptions="CenterAndExpand"
+						FontSize="Medium"
+						/>
+			 </StackLayout>
+		     
+</ContentPage>
